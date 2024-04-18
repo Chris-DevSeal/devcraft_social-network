@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 WORKDIR /app
-COPY ./dist/apps/users .
-COPY apps/users/prisma ./prisma/
-ENV PORT=3001
+COPY ./dist/apps/posts .
+COPY apps/posts/prisma ./prisma/
+ENV PORT=3002
 EXPOSE ${PORT}
 RUN npm install --production
 RUN npx prisma generate

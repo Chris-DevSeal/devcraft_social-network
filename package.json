@@ -5,7 +5,11 @@
   "scripts": {
     "dev-backend": "nx run-many --target=serve --projects=posts,users,feed --parallel",
     "dev-frontend": "nx serve ui",
-    "prisma-generate": "nx run-many --target=prisma-generate --projects=posts,users,feed"
+    "prisma-generate": "nx run-many --target=prisma-generate --projects=posts,users,feed",
+    "docker-compose":"docker-compose up -d",
+    "docker-build-users":" docker build -f ./apps/users/Dockerfile . -t users",
+    "docker-build-posts":" docker build -f ./apps/posts/Dockerfile . -t posts",
+    "docker-build-feed":" docker build -f ./apps/feed/Dockerfile . -t feed"
   },
   "private": true,
   "dependencies": {

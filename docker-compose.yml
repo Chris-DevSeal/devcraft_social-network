@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  posts:
+    build: 
+      dockerfile: ./apps/posts/Dockerfile
+    image: posts
+    container_name: posts
+    ports:
+      - "3002:3002"
+
+  users:
+    build: 
+      dockerfile: ./apps/users/Dockerfile
+    image: users
+    container_name: users
+    ports:
+      - "3001:3001"
+ 
+  feed:
+    build: 
+      dockerfile: ./apps/feed/Dockerfile
+    image: feed
+    container_name: feed
+    ports:
+      - "3000:3000"
+
+
+
