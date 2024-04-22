@@ -9,6 +9,7 @@
     "docker-compose":"docker-compose up -d",
     "docker-build-users":" docker build -f ./apps/users/Dockerfile . -t users",
     "docker-build-posts":" docker build -f ./apps/posts/Dockerfile . -t posts",
+    "docker-build-ui":" docker build -f ./apps/ui/Dockerfile . -t ui",
     "docker-build-feed":" docker build -f ./apps/feed/Dockerfile . -t feed"
   },
   "private": true,

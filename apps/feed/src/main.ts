@@ -3,7 +3,7 @@ import express from 'express';
 
 const host = process.env.HOST ?? 'localhost';
 const prisma = new PrismaClient();
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+const port = process.env.PORT ? Number(process.env.PORT) : 3002;
 
 const app = express();
 

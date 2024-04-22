@@ -7,7 +7,7 @@ services:
     image: posts
     container_name: posts
     ports:
-      - "3002:3002"
+      - "3000:3000"
 
   users:
     build: 
@@ -23,7 +23,16 @@ services:
     image: feed
     container_name: feed
     ports:
-      - "3000:3000"
+      - "3002:3002"
+
+
+  ui:
+    build:
+      dockerfile: ./apps/ui/Dockerfile
+    image: ui
+    container_name: ui
+    ports:
+      - "4200:80"  
 
 
 
