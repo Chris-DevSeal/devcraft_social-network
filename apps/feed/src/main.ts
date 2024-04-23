@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { log } from 'console';
 import express from 'express';
 
 const host = process.env.HOST ?? 'localhost';
@@ -13,9 +14,11 @@ app.get('/', (req, res) => {
     orderBy: { createdAt: 'desc' },
   });
 
+console.log("Hello from feed")
+
   res.json(posts);
 });
 
-app.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
+app.listen(port, () => {
+  console.log(`[ ready ] http://localhost:${port}`);
 });
