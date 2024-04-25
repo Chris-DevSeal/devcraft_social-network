@@ -15,4 +15,8 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run build
-      - run: npm run lint
+  
+  lint: 
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run lint  
