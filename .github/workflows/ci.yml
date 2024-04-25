@@ -7,8 +7,7 @@ on:
 jobs:
   build:
     runs-on: 
-        - ubuntu-latest
-        - runner-1
+        - self-hosted
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js 16
@@ -21,7 +20,6 @@ jobs:
   lint: 
     runs-on: 
         - self-hosted
-        - runner-2
     needs: build
     steps:
         - uses: actions/checkout@v3
