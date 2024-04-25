@@ -1,8 +1,7 @@
 import { PrismaClient } from '@prisma/client';
-import { log } from 'console';
 import express from 'express';
 
-const host = process.env.HOST ?? 'localhost';
+// const host = process.env.HOST ?? 'localhost';
 const prisma = new PrismaClient();
 const port = process.env.PORT ? Number(process.env.PORT) : 3002;
 

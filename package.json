@@ -4,7 +4,9 @@
   "license": "MIT",
   "scripts": {
     "dev-backend": "nx run-many --target=serve --projects=posts,users,feed --parallel",
+    "build": "nx run-many --target=build --projects=posts,users,feed,ui --parallel",
     "dev-frontend": "nx serve ui",
+    "lint":"nx run posts:lint & nx run feed:lint & nx run users:lint",
     "prisma-generate": "nx run-many --target=prisma-generate --projects=posts,users,feed",
     "docker-compose":"docker-compose up -d",
     "docker-build-users":" docker build -f ./apps/users/Dockerfile . -t users",

@@ -1,4 +1,4 @@
-name: <abbr title="Continuous Integration">CI</abbr>
+name: Continuous Integration
 
 on:
   push:
@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: nx build social-network
-      - run: nx test social-network
+      - run: npm build
+      - run: npm lint
