@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
         with: 
           fetch-depth: 0
-      - name: Use Node.js 16
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -33,4 +33,5 @@ jobs:
         - uses: actions/checkout@v3    
         - run: npm ci
         - uses: nrwl/nx-set-shas@v3
-        - run: npx nx affected -t lint  
+        - run: npx nx-cloud record -- nx format:check
+        - run: npx nx run-many --target=lint --projects=posts,users,feed --parallel
